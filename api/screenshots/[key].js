@@ -8,11 +8,25 @@ const privateKey = (() => {
 })()
 const jsonwebtoken = require('jsonwebtoken')
 
+function resolveUrl(key) {
+  {
+    const m = key.match(/^dt\.in\.th-([a-zA-Z0-9][a-zA-Z0-9_.-]*)$/)
+    if (m) {
+      return 'https://dt.in.th/' + m[1] + '.html'
+    }
+  }
+}
+
 module.exports = (req, res) => {
   const { query: { key } } = req
+  const url = resolveUrl(String(key).replace(/\.png$/, ''))
+  if (!url) {
+    res.send('nope')
+    return
+  }
   const jwt = jsonwebtoken.sign(
     {
-      url: 'https://dt.in.th/',
+      url,
       width: 1200,
       height: 630,
       waitUntil: 'networkidle0',
