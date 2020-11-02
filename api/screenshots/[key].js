@@ -22,8 +22,9 @@ module.exports = (req, res) => {
     {
       algorithm: 'RS256',
       noTimestamp: true,
-      issuer: 'ss.dt.in.th',
+      issuer: 'screenshot-redirector',
     }
   )
-  res.send(`Hello ${key} https://capture.the.spacet.me/${jwt}!`)
+  const ext = 'png'
+  res.redirect(`https://capture.the.spacet.me/${jwt}.${ext}`)
 }
