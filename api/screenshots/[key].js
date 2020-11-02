@@ -9,7 +9,7 @@ const privateKey = (() => {
 const jsonwebtoken = require('jsonwebtoken')
 
 module.exports = (req, res) => {
-  const { query: { name } } = req
+  const { query: { key } } = req
   const jwt = jsonwebtoken.sign(
     {
       url: 'https://dt.in.th/',
@@ -25,5 +25,5 @@ module.exports = (req, res) => {
       issuer: 'ss.dt.in.th',
     }
   )
-  res.send(`Hello ${name} https://capture.the.spacet.me/${jwt}!`)
+  res.send(`Hello ${key} https://capture.the.spacet.me/${jwt}!`)
 }
