@@ -31,6 +31,7 @@ module.exports = (req, res) => {
       height: 630,
       waitUntil: 'networkidle0',
       deviceScaleFactor: 1,
+      v: 2,
     },
     privateKey,
     {
