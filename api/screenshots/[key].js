@@ -15,6 +15,15 @@ function resolveUrl(key) {
       return 'https://dt.in.th/' + m[1] + '.html'
     }
   }
+  {
+    if (m === 'thaiclubhouse') {
+      return 'https://thaiclubhouse.web.app/'
+    }
+    const m = key.match(/^thaiclubhouse-([0-9][0-9-]*)$/)
+    if (m) {
+      return 'https://thaiclubhouse.web.app/' + m[1] + '.html'
+    }
+  }
 }
 
 module.exports = (req, res) => {
