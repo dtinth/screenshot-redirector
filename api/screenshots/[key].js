@@ -16,7 +16,7 @@ function resolveUrl(key) {
     }
   }
   {
-    if (m === 'thaiclubhouse') {
+    if (key === 'thaiclubhouse') {
       return 'https://thaiclubhouse.web.app/'
     }
     const m = key.match(/^thaiclubhouse-([0-9][0-9-]*)$/)
