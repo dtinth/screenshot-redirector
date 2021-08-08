@@ -16,6 +16,12 @@ function resolveUrl(key) {
     }
   }
   {
+    const m = key.match(/^docs-([a-zA-Z0-9_.-]*)$/)
+    if (m) {
+      return 'https://docs.dt.in.th/' + m[1].replace(/__/g, '/') + '.html'
+    }
+  }
+  {
     if (key === 'thaiclubhouse') {
       return 'https://thaiclubhouse.web.app/'
     }
