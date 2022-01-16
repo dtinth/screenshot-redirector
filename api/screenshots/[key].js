@@ -22,6 +22,24 @@ function resolveUrl(key) {
     }
   }
   {
+    const m = key.match(/^apiref-(ride)$/)
+    if (m) {
+      return 'https://apiref.page/package/' + m[1]
+    }
+  }
+  {
+    const m = key.match(/^apiref-dtinth-([a-z-]+)$/)
+    if (m) {
+      return 'https://apiref.page/package/@dtinth/' + m[1]
+    }
+  }
+  {
+    const m = key.match(/^apiref-spacet\.me-([a-z-]+)$/)
+    if (m) {
+      return 'https://apiref.page/package/@spacet.me/' + m[1]
+    }
+  }
+  {
     if (key === 'thaiclubhouse') {
       return 'https://thaiclubhouse.web.app/'
     }
