@@ -22,7 +22,7 @@ function resolveUrl(key) {
     }
   }
   {
-    const m = key.match(/^apiref-(ride)$/)
+    const m = key.match(/^apiref-(bsearch|ride|seald)$/)
     if (m) {
       return 'https://apiref.page/package/' + m[1]
     }
