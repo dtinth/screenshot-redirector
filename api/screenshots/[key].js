@@ -74,5 +74,6 @@ module.exports = (req, res) => {
     }
   )
   const ext = 'png'
-  res.redirect(`https://capture.the.spacet.me/${jwt}.${ext}`)
+  // res.redirect(`https://capture.the.spacet.me/${jwt}.${ext}`)
+  res.redirect(`https://screenshotter.fly.dev/api/image/${jwt}.${ext}`)
 }
