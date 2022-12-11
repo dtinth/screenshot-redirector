@@ -22,7 +22,7 @@ function resolveUrl(key) {
     }
   }
   {
-    const m = key.match(/^apiref-(bsearch|init-middleware|promptpay-qr|react-performance-coach|ride|seald|stack-local-storage|sync-external-store|tkt|is-axios-error)$/)
+    const m = key.match(/^apiref-(bsearch|init-middleware|promptpay-qr|react-performance-coach|ride|seald|stack-local-storage|sync-external-store|tagged-hypertext|tkt|is-axios-error)$/)
     if (m) {
       return 'https://apiref.page/package/' + m[1]
     }
