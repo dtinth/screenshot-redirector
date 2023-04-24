@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/image/:path(.*)",
+      "destination": "https://screenshotter.fly.dev/api/image/:path*",
+      "permanent": false
+    }
+  ]
+}
